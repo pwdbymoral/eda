@@ -69,7 +69,7 @@ Rotações são operações estruturais que executam em tempo constante para BST
 
 ### **Conceito de altura de um nó**
 
-Até aqui, estávamos trabalhando com o conceito de altura de uma árvore que, por sinal, é a altura do nó raiz. Como precisamos manter o balanceamento para todos os nós, precisamos também adicionar ao nó a informação relativa a sua altura. Portanto, há uma modificação na implementação de um No, que passa agora a registrar também a sua altura. Vejamos:
+Até aqui, estávamos trabalhando com o conceito de altura de uma árvore que, por sinal, é a altura do nó raiz. Como precisamos manter o balanceamento para todos os nós, precisamos também adicionar ao nó a informação relativa a sua altura. Portanto, há uma modificação na implementação de um nó, que passa agora a registrar também a sua altura. Vejamos:
 
 ```java
 public class Node {
@@ -105,7 +105,7 @@ public int height() {
 }
 ```
 ### ***Balance* de um nó**
-Sabendo que podemos calcular a altura da sub-árvore a esquerda e da sub-árvore à direita, podemos saber o balance de um nó. Balance é a diferença entre a altura da sub-árvore à esquerda e a altura da sub-árvore à direita.
+Sabendo que podemos calcular a altura da sub-árvore à esquerda e da sub-árvore à direita, podemos saber o balance de um nó. Balance é a diferença entre a altura da sub-árvore à esquerda e a altura da sub-árvore à direita.
 ```java
 private int balance(Node node) {
     if (node != null) return height(node.left) - height(node.right);
